@@ -1,8 +1,16 @@
-# 📦 APT Proxy + Private/Public EC2 + MySQL + Spring Boot 연동 가이드
+# 📦 클라우드 보안 아키텍처 관점에서의 APT Proxy 연동 EC2, MySQL, Spring Boot 통합 실습 가이드
 
 <br>
 
-## ✅ 환경 개요
+## 👨‍👩‍👧‍👦 Contributors
+
+| <img src="https://github.com/kcs19.png" width="200px"> | <img src="https://github.com/HongChan1412.png" width="200px"> | <img src="https://github.com/letmeloveyou82.png" width="200px"> | <img src="https://github.com/nanahj.png" width="200px"> |
+| :---: | :---: | :---: | :---: |
+| [김창성](https://github.com/kcs19) | [나홍찬](https://github.com/HongChan1412) | [최윤정](https://github.com/letmeloveyou82) | [이현정](https://github.com/nanahj) |
+
+<br>
+
+## ✅ APT 프록시 기반 EC2 네트워크 아키텍처 구성 환경 시나리오
 
 - **Private EC2**는 외부 인터넷에 직접 연결할 수 없음.
 - **Public EC2**는 인터넷에 연결되어 있음.
@@ -13,16 +21,7 @@
 ---
 
 ## 📍 Architecture
-![image](https://github.com/user-attachments/assets/ea899d4c-856f-4326-b347-4326392b27fa)
-
-
-<br>
-
-## 👨‍👩‍👧‍👦 Contributors
-
-| <img src="https://github.com/kcs19.png" width="200px"> | <img src="https://github.com/HongChan1412.png" width="200px"> | <img src="https://github.com/letmeloveyou82.png" width="200px"> | <img src="https://github.com/nanahj.png" width="200px"> |
-| :---: | :---: | :---: | :---: |
-| [김창성](https://github.com/kcs19) | [나홍찬](https://github.com/HongChan1412) | [최윤정](https://github.com/letmeloveyou82) | [이현정](https://github.com/nanahj) |
+![image](https://github.com/user-attachments/assets/e7966ec8-04a7-4330-b01d-8b25d7c6f0ca)
 
 
 <br>
@@ -100,7 +99,7 @@ server.port=8080
 
 <br>
 
-## ☕ Public EC2에서 Spring Boot 실행
+## 🚀 Public EC2에서 Spring Boot 실행
 ```shell
 # JDK 설치
 sudo apt install openjdk-17-jre-headless -y
@@ -110,5 +109,5 @@ java -jar step06_SpringDataJPA-0.0.1-SNAPSHOT.jar
 ```
 
 > [!NOTE]  
-> Public EC2의 보안 그룹 인바운드에 8080 포트 허용
+> Public EC2의 보안 그룹 인바운드에 8080 포트 허용 <br>
 > `http://<PUBLIC_EC2_PUBLIC_IP>:8080`로 접속 확인
